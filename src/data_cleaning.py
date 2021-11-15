@@ -1,6 +1,7 @@
 import pandas as pd
 from apps.config import Config
 import os
+from app_logger.logger import applogger
 
 
 # Every Entry in Size column has "M" , "+" and "K" which needs to be removed and datatype into int/float
@@ -95,8 +96,16 @@ def positive(column):
         else:
             return i*(-1)
 
-1
+
+filename = os.path.basename(__file__)
 class rawdatacleaning:
+    def __init__(self):
+        self.classname = self.__class__.__name__
+        self.file_object = open("logs/operations.txt", 'a+')
+        self.logger_object = applogger()
+
+        self.logger_object.log(self.file_object, f'Current Script: {filename}')
+        self.logger_object.log(self.file_object, f'Entered the class: {self.classname}')
 
     #reading the dataset
     #gps = pd.read_csv("Data_given\googleplaystore.csv")
@@ -105,9 +114,11 @@ class rawdatacleaning:
 
 
     def view_missingvalues(self):
+        self.logger_object.log(self.file_object, 'Entered view_missingvalues function') 
         return self.gps.isnull().sum()
 
     def datatype(self,df):
+        self.logger_object.log(self.file_object, 'Entered datatype function') 
         index, data_type = df.dtypes.index, df.dtypes.values
         d = {}
         for key, value in zip(index,data_type):
@@ -116,7 +127,7 @@ class rawdatacleaning:
 
 
     def cleandataframe(self,df):
-
+        self.logger_object.log(self.file_object, 'Entered cleandataframe function') 
         # Reviews
         df.loc[df.Reviews == '3.0M','Reviews'] = 3000000
 
