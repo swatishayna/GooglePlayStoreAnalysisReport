@@ -95,9 +95,14 @@ class Analysis:
         if categorical_analysis:
             st.write(self.analysis.categoricalanalysis())
 
+        frequent_category = st.checkbox("Most Frequent Category ")
+        if frequent_category:
+            st.write(self.analysis.frequentcategory())
+
         highest_installations = st.checkbox("Which category has highest number of installations")
         if highest_installations:
-            st.plotly_chart(self.analysis.highestinstallations(),use_container_width=True)
+            st.write(self.analysis.highestinstallations()[1])
+            st.plotly_chart(self.analysis.highestinstallations()[0],use_container_width=True)
 
         avg_category_rating =  st.checkbox("Which Category has maximum average rating")
         if avg_category_rating:
@@ -137,7 +142,8 @@ class Analysis:
 
         paid_categories = st.checkbox("Which categories are of Type paid")
         if paid_categories:
-            st.plotly_chart(self.analysis.paid_categories(), use_container_width=True)
+            st.dataframe(self.analysis.paid_categories()[1])
+            st.plotly_chart(self.analysis.paid_categories()[0], use_container_width=True)
 
         highest_paid_installed = st.checkbox("which are the categories with highest number of paid installations?")
         if highest_paid_installed:

@@ -57,3 +57,36 @@
 2021-11-15/10:24:17		Entered the class: rawdatacleaning
 2021-11-15/10:24:17		Current Script: Analyis.py
 2021-11-15/10:24:17		Entered the class: VisualisationAnalysis
+2021-11-25/22:00:31		Current Script: data_cleaning.py
+2021-11-25/22:00:31		Entered the class: rawdatacleaning
+2021-11-25/22:00:32		Current Script: Analyis.py
+2021-11-25/22:00:32		Entered the class: VisualisationAnalysis
+2021-11-26/10:21:34		Current Script: data_cleaning.py
+2021-11-26/10:21:34		Entered the class: rawdatacleaning
+2021-11-26/10:21:34		Current Script: Analyis.py
+2021-11-26/10:21:34		Entered the class: VisualisationAnalysis
+2021-11-26/10:21:34		Entered highestinstallations function
+2021-11-26/10:21:34		Entered highestinstallations function
+2021-11-26/10:21:34		Entered paid_categories function
+2021-11-26/10:21:34		Entered paid_categories function
+2021-11-26/10:25:34		Entered highestinstallations function
+2021-11-26/10:25:34		Entered highestinstallations function
+2021-11-26/10:25:45		Entered highestinstallations function
+2021-11-26/10:25:45		Entered highestinstallations function
+2021-11-26/10:25:45		Entered highest_paid_installed function
+2021-11-26/10:25:50		Entered highestinstallations function
+2021-11-26/10:25:51		Entered highestinstallations function
+2021-11-26/10:25:51		Entered paid_categories function
+2021-11-26/10:25:51		Entered paid_categories function
+2021-11-26/10:25:51		Entered highest_paid_installed function
+2021-11-26/10:27:16		Current Script: data_cleaning.py
+2021-11-26/10:27:16		Entered the class: rawdatacleaning
+2021-11-26/10:27:16		Current Script: Analyis.py
+2021-11-26/10:27:16		Entered the class: VisualisationAnalysis
+2021-11-26/10:27:16		Entered highestinstallations function
+2021-11-26/10:27:16		Entered highestinstallations function
+2021-11-26/10:27:17		Entered paid_categories function
+2021-11-26/10:27:17		Entered paid_categories function
+2021-11-26/10:27:17		Entered highest_paid_installed function
+2021-11-26/13:29:49		Current Script: tableau_dashboard.py
+2021-11-26/13:29:49		Entered tableau dashboard

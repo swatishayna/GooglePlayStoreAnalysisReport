@@ -52,10 +52,15 @@ class VisualisationAnalysis(rawdatacleaning):
             key = "total number of categories in " + feature
             d[key] = self.data[feature].nunique()
         return d
+    def frequentcategory(self):
+        self.logger_object.log(self.file_object, 'Entered frequentcategory function')  
+        return self.data['Category'].value_counts()
+
     def highestinstallations(self):
         self.logger_object.log(self.file_object, 'Entered highestinstallations function')  
         fig = px.bar(self.data,x = self.x_val.index,y = self.x_val, color=self.x_val.index)
-        return fig
+        
+        return fig, self.x_val
     def avg_CategoryRating(self):
         self.logger_object.log(self.file_object, 'Entered avg_CategoryRating function')  
         #x_rat_cat = self.data['Rating'].groupby(by=self.data['Category']).mean().sort_values(ascending=False)
@@ -77,7 +82,7 @@ class VisualisationAnalysis(rawdatacleaning):
         #self.paid_data = self.data[self.data.Type == 'Paid']
         fig = px.bar( self.paid_data, x= self.paid_data['Category'].value_counts().index, y= self.paid_data['Category'].value_counts().values,
                color= self.paid_data['Category'].value_counts().index)
-        return fig
+        return fig, self.paid_data['Category'].value_counts().sort_values(ascending = False)
     def highest_paid_installed(self):
         self.logger_object.log(self.file_object, 'Entered highest_paid_installed function')
         #paid_cat_install = self.paid_data['Installs_New'].groupby(by=self.paid_data['Category']).sum().sort_values(ascending=False)
